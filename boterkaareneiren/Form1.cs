@@ -63,6 +63,7 @@ namespace boterkaareneiren
             }
         }
         int zetnummer = 0;
+        int kas = 0;
         string zet(int stap)
         {
             string welke;
@@ -78,6 +79,7 @@ namespace boterkaareneiren
             }
             return welke;
         }
+
         private void checkbeurt()
         {
             int spelernummer = zetnummer;
