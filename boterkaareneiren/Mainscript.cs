@@ -16,54 +16,63 @@ namespace boterkaareneiren
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void win()
+        {
+            if (zetnummer == 0)
+            {
+                MessageBox.Show("O heeft gewonnen");
+            }
+            else
+            {
+                MessageBox.Show("X heeft gewonnen");
+            }
+        }
+        public void Form1_Load(object sender, EventArgs e)
         {
 
         }
-        private void checkwin()
+        public void checkwin()
         {
             if (b1.Text == b2.Text && b2.Text == b3.Text && b3.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b4.Text == b5.Text && b5.Text == b6.Text && b6.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b7.Text == b8.Text && b8.Text == b9.Text && b9.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b1.Text == b4.Text && b4.Text == b7.Text && b7.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b2.Text == b5.Text && b5.Text == b8.Text && b8.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b3.Text == b6.Text && b6.Text == b9.Text && b9.Text !="")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
 
             if (b3.Text == b5.Text && b5.Text == b7.Text && b7.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
             if (b1.Text == b5.Text && b5.Text == b9.Text && b9.Text != "")
             {
-                MessageBox.Show("heeft gewonnen");
+                win();
             }
         }
         int zetnummer = 0;
-        int kas = 0;
         string zet(int stap)
         {
             string welke;
@@ -80,7 +89,7 @@ namespace boterkaareneiren
             return welke;
         }
 
-        private void checkbeurt()
+        public void checkbeurt()
         {
             int spelernummer = zetnummer;
             if (spelernummer == 0)
