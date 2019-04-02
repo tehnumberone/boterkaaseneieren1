@@ -32,65 +32,111 @@ namespace WindowsFormsApp1
             if (b1.Text == b2.Text && b2.Text == b3.Text && b3.Text != "")
             {
                 if (b1.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
-
+                {
+                    win();
+                    zetnummer++;
+                }
             }
-
             if (b4.Text == b5.Text && b5.Text == b6.Text && b6.Text != "")
             {
                 if (b4.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
 
             if (b7.Text == b8.Text && b8.Text == b9.Text && b9.Text != "")
             {
                 if (b7.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
 
             if (b1.Text == b4.Text && b4.Text == b7.Text && b7.Text != "")
             {
                 if (b1.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
 
             if (b2.Text == b5.Text && b5.Text == b8.Text && b8.Text != "")
             {
                 if (b2.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
 
             if (b3.Text == b6.Text && b6.Text == b9.Text && b9.Text != "")
             {
                 if (b3.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
 
             if (b3.Text == b5.Text && b5.Text == b7.Text && b7.Text != "")
             {
                 if (b3.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
             if (b1.Text == b5.Text && b5.Text == b9.Text && b9.Text != "")
             {
                 if (b1.Text == "X")
-                { win(); }
+                {
+                    win();
+                    zetnummer--;
+                }
                 else
-                { win(); }
+                {
+                    win();
+                    zetnummer++;
+                }
             }
         }
         private void checkbeurt()
@@ -120,87 +166,104 @@ namespace WindowsFormsApp1
             return welke;
         }
         private void algoritme() // maak een algoritme noob //
+
         {
             //winning statements AI//
-            if (b1.Text == "O" && b1.Text == b2.Text && b3.Text != "" && zetnummer != 0)
+            if (b1.Text == "O" && b1.Text == b2.Text && b3.Text == "" && zetnummer != 0)
             {
                 b3.Text = "O";
+                zetnummer--;
             }
 
-            if (b4.Text == "O" && b4.Text == b5.Text && b6.Text != "" && zetnummer != 0)
+            if (b4.Text == "O" && b4.Text == b5.Text && b6.Text == "" && zetnummer != 0)
             {
                 b6.Text = "O";
+                zetnummer--;
             }
 
-            if (b7.Text == "O" && b7.Text == b8.Text && b9.Text != "" && zetnummer != 0)
+            if (b7.Text == "O" && b7.Text == b8.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
-            if (b1.Text == "O" && b1.Text == b4.Text && b7.Text != "" && zetnummer != 0)
+            if (b1.Text == "O" && b1.Text == b4.Text && b7.Text == "" && zetnummer != 0)
             {
                 b7.Text = "O";
+                zetnummer--;
             }
 
-            if (b2.Text == "O" && b2.Text == b5.Text && b8.Text != "" && zetnummer != 0)
+            if (b2.Text == "O" && b2.Text == b5.Text && b8.Text == "" && zetnummer != 0)
             {
                 b8.Text = "O";
+                zetnummer--;
             }
 
-            if (b3.Text == "O" && b3.Text == b6.Text && b9.Text != "" && zetnummer != 0)
+            if (b3.Text == "O" && b3.Text == b6.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
-            if (b3.Text == "O" && b3.Text == b5.Text && b7.Text != "" && zetnummer != 0)
+            if (b3.Text == "O" && b3.Text == b5.Text && b7.Text == "" && zetnummer != 0)
             {
                 b7.Text = "O";
+                zetnummer--;
             }
 
-            if (b1.Text == "O" && b1.Text == b5.Text && b9.Text != "" && zetnummer != 0)
+            if (b1.Text == "O" && b1.Text == b5.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
             //Block enemy//
-            if (b1.Text == "X" && b1.Text == b2.Text && b3.Text != "" && zetnummer != 0)
+            if (b1.Text == "X" && b1.Text == b2.Text && b3.Text == "" && zetnummer != 0)
             {
                 b3.Text = "O";
+                zetnummer--;
             }
 
-            if (b4.Text == "X" && b4.Text == b5.Text && b6.Text != "" && zetnummer != 0)
+            if (b4.Text == "X" && b4.Text == b5.Text && b6.Text == "" && zetnummer != 0)
             {
                 b6.Text = "O";
+                zetnummer--;
             }
 
-            if (b7.Text == "X" && b7.Text == b8.Text && b9.Text != "" && zetnummer != 0)
+            if (b7.Text == "X" && b7.Text == b8.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
-            if (b1.Text == "X" && b1.Text == b4.Text && b7.Text != "" && zetnummer != 0)
+            if (b1.Text == "X" && b1.Text == b4.Text && b7.Text == "" && zetnummer != 0)
             {
                 b7.Text = "O";
+                zetnummer--;
             }
-
-            if (b2.Text == "X" && b2.Text == b5.Text && b8.Text != "" && zetnummer != 0)
+        
+            if (b2.Text == "X" && b2.Text == b5.Text && b8.Text == "" && zetnummer != 0)
             {
                 b8.Text = "O";
+                zetnummer--;
             }
 
-            if (b3.Text == "X" && b3.Text == b6.Text && b9.Text != "" && zetnummer != 0)
+            if (b3.Text == "X" && b3.Text == b6.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
-            if (b3.Text == "X" && b3.Text == b5.Text && b7.Text != "" && zetnummer != 0)
+            if (b3.Text == "X" && b3.Text == b5.Text && b7.Text == "" && zetnummer != 0)
             {
                 b7.Text = "O";
+                zetnummer--;
             }
 
-            if (b1.Text == "X" && b1.Text == b5.Text && b9.Text != "" && zetnummer != 0)
+            if (b1.Text == "X" && b1.Text == b5.Text && b9.Text == "" && zetnummer != 0)
             {
                 b9.Text = "O";
+                zetnummer--;
             }
 
             //AI Placement//
@@ -247,17 +310,17 @@ namespace WindowsFormsApp1
                 if (b3.Text != "O" && b3.Text == "" && zetnummer != 0)
                 {
                     b3.Text = "O";
-                    zetnummer++;  
+                    zetnummer--;  
                 }
                 if (b3.Text == "O" && b6.Text == "" && zetnummer != 0)
                 {
                     b6.Text = "O";
-                    zetnummer++;
+                    zetnummer--;
                 }
                 if (b6.Text == "O" && b9.Text == "" && zetnummer != 0)
                 {
                     b9.Text = "O";
-                    zetnummer++;
+                    zetnummer--;
                 }
             }
 
@@ -266,20 +329,21 @@ namespace WindowsFormsApp1
                 if (b7.Text != "O" && b7.Text == ""&& zetnummer != 0)
                 {
                     b7.Text = "O";
-                    zetnummer++; 
+                    zetnummer--; 
                 }
                 if (b7.Text == "O" && b8.Text == "" && zetnummer != 0)
                 {
                     b8.Text = "O";
-                    zetnummer++;
+                    zetnummer--;
                 }
                 if (b8.Text == "O" && b9.Text == "" && zetnummer != 0)
                 {
                     b9.Text = "O";
-                    zetnummer++;
+                    zetnummer--;
                 }
             }
         }
+
         private void b1_Click(object sender, EventArgs e)
         {
             if (b1.Text == "")
@@ -297,9 +361,10 @@ namespace WindowsFormsApp1
             if (b2.Text == "")
             {
                 b2.Text = zet(zetnummer);
-                algoritme();
-                checkwin();
+                checkwin(); 
             }
+            algoritme();
+            checkwin();
             checkbeurt();
             
         }
@@ -309,9 +374,10 @@ namespace WindowsFormsApp1
             if (b3.Text == "")
             {
                 b3.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
             
         }
@@ -321,9 +387,10 @@ namespace WindowsFormsApp1
             if (b4.Text == "")
             {
                 b4.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
             
         }
@@ -333,9 +400,10 @@ namespace WindowsFormsApp1
             if (b5.Text == "")
             {
                 b5.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
            
         }
@@ -345,9 +413,10 @@ namespace WindowsFormsApp1
             if (b6.Text == "")
             {
                 b6.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
         }
 
@@ -356,9 +425,10 @@ namespace WindowsFormsApp1
             if (b7.Text == "")
             {
                 b7.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
         }
 
@@ -367,9 +437,10 @@ namespace WindowsFormsApp1
             if (b8.Text == "")
             {
                 b8.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
         }
 
@@ -378,9 +449,10 @@ namespace WindowsFormsApp1
             if (b9.Text == "")
             {
                 b9.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
+            algoritme();
+            checkwin();
             checkbeurt();
         }
     }
