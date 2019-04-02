@@ -160,7 +160,6 @@
             this.Controls.Add(this.b1);
             this.Name = "Form1";
             this.Text = "2 Player Boter Kaas en Eieren";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

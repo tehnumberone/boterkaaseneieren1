@@ -16,7 +16,7 @@ namespace boterkaareneiren
         {
             InitializeComponent();
         }
-        public void win()
+        private void win()
         {
             if (zetnummer == 0)
             {
@@ -27,11 +27,7 @@ namespace boterkaareneiren
                 MessageBox.Show("X heeft gewonnen");
             }
         }
-        public void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        public void checkwin()
+        private void checkwin()
         {
             if (b1.Text == b2.Text && b2.Text == b3.Text && b3.Text != "")
             {
@@ -72,6 +68,16 @@ namespace boterkaareneiren
                 win();
             }
         }
+        private void checkbeurt()
+        {
+            int spelernummer = zetnummer;
+            if (spelernummer == 0)
+            { label2.Text = "Speler X is aan de beurt"; }
+            else
+            { label2.Text = "Speler O is aan de beurt"; }
+
+
+        }
         int zetnummer = 0;
         string zet(int stap)
         {
@@ -87,17 +93,6 @@ namespace boterkaareneiren
                 zetnummer--;
             }
             return welke;
-        }
-
-        public void checkbeurt()
-        {
-            int spelernummer = zetnummer;
-            if (spelernummer == 0)
-            { label2.Text = "Speler X is aan de beurt"; }
-            else
-            { label2.Text = "Speler O is aan de beurt"; }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)

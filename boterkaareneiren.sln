@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boterkaareneiren", "boterkaareneiren\boterkaareneiren.csproj", "{EB8B4248-5A33-4C70-B012-E1C09D6237F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiplayer", "boterkaareneiren\Multiplayer.csproj", "{EB8B4248-5A33-4C70-B012-E1C09D6237F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{1AAE46B1-F40A-4185-9BA6-39DC737C2527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleplayer", "WindowsFormsApp1\Singleplayer.csproj", "{1AAE46B1-F40A-4185-9BA6-39DC737C2527}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
