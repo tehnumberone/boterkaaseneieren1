@@ -20,10 +20,12 @@ namespace WindowsFormsApp1
         {
             if (zetnummer == 0)
             {
+                winner = 1;
                 MessageBox.Show("O heeft gewonnen");
             }
             else
             {
+                winner = 1;
                 MessageBox.Show("X heeft gewonnen");
             }
         }
@@ -150,6 +152,7 @@ namespace WindowsFormsApp1
 
         }
         int zetnummer = 0;
+        int winner =0;
         string zet(int stap)
         {
             string welke;
@@ -257,6 +260,12 @@ namespace WindowsFormsApp1
             if (b3.Text == "X" && b3.Text == b5.Text && b7.Text == "" && zetnummer != 0)
             {
                 b7.Text = "O";
+                zetnummer--;
+            }
+
+            if (b7.Text == "X" && b7.Text == b5.Text && b3.Text == "" && zetnummer != 0)
+            {
+                b3.Text = "O";
                 zetnummer--;
             }
 
@@ -371,7 +380,7 @@ namespace WindowsFormsApp1
 
         private void b3_Click(object sender, EventArgs e)
         {
-            if (b3.Text == "")
+            if (b3.Text == "" && winner != 1)
             {
                 b3.Text = zet(zetnummer);
                 checkwin();
@@ -384,15 +393,18 @@ namespace WindowsFormsApp1
 
         private void b4_Click(object sender, EventArgs e)
         {
-            if (b4.Text == "")
+            if (b4.Text == "" && winner !=1)
             {
                 b4.Text = zet(zetnummer);
                 checkwin();
             }
+            if(winner!=1)
+            { 
             algoritme();
             checkwin();
             checkbeurt();
-            
+            }
+
         }
 
         private void b5_Click(object sender, EventArgs e)
