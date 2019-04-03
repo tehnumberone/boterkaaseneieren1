@@ -18,12 +18,12 @@ namespace WindowsFormsApp1
         }
         private void win()
         {
-            if (zetnummer == 0)
+            if (zetnummer == 0 && winner ==0)
             {
                 winner = 1;
                 MessageBox.Show("O heeft gewonnen");
             }
-            else
+            if (zetnummer == 1 && winner == 0)
             {
                 winner = 1;
                 MessageBox.Show("X heeft gewonnen");
@@ -355,40 +355,48 @@ namespace WindowsFormsApp1
 
         private void b1_Click(object sender, EventArgs e)
         {
-            if (b1.Text == "")
+            if (b1.Text == "" && winner != 1)
             {
                 b1.Text = zet(zetnummer);
-                algoritme();
                 checkwin();
             }
-            checkbeurt();
-            
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b2_Click(object sender, EventArgs e)
         {
-            if (b2.Text == "")
+            if (b2.Text == "" && winner != 1)
             {
                 b2.Text = zet(zetnummer);
-                checkwin(); 
+                checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
-            
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b3_Click(object sender, EventArgs e)
         {
+
             if (b3.Text == "" && winner != 1)
             {
                 b3.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
-            
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b4_Click(object sender, EventArgs e)
@@ -404,68 +412,82 @@ namespace WindowsFormsApp1
             checkwin();
             checkbeurt();
             }
-
         }
 
         private void b5_Click(object sender, EventArgs e)
         {
-            if (b5.Text == "")
+
+            if (b5.Text == "" && winner != 1)
             {
                 b5.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
-           
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b6_Click(object sender, EventArgs e)
         {
-            if (b6.Text == "")
+            if (b6.Text == "" && winner != 1)
             {
                 b6.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b7_Click(object sender, EventArgs e)
         {
-            if (b7.Text == "")
+            if (b7.Text == "" && winner != 1)
             {
                 b7.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b8_Click(object sender, EventArgs e)
         {
-            if (b8.Text == "")
+            if (b8.Text == "" && winner != 1)
             {
                 b8.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
 
         private void b9_Click(object sender, EventArgs e)
         {
-            if (b9.Text == "")
+            if (b9.Text == "" && winner != 1)
             {
                 b9.Text = zet(zetnummer);
                 checkwin();
             }
-            algoritme();
-            checkwin();
-            checkbeurt();
+            if (winner != 1)
+            {
+                algoritme();
+                checkwin();
+                checkbeurt();
+            }
         }
     }
 }
