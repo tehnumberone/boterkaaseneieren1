@@ -16,6 +16,25 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        int zetnummer = 0;
+        int winner = 0;
+        string zet(int stap)
+        {
+            string welke;
+            if (stap == 0)
+            {
+                welke = "X";
+                zetnummer++;
+            }
+            else
+            {
+                welke = "O";
+                zetnummer--;
+            }
+            return welke;
+        }
+
         private void win()
         {
             if (zetnummer == 0 && winner ==0)
@@ -29,6 +48,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("X heeft gewonnen");
             }
         }
+
         private void checkwin()
         {
             if (b1.Text == b2.Text && b2.Text == b3.Text && b3.Text != "")
@@ -141,6 +161,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
         private void checkbeurt()
         {
             int spelernummer = zetnummer;
@@ -151,24 +172,8 @@ namespace WindowsFormsApp1
 
 
         }
-        int zetnummer = 0;
-        int winner =0;
-        string zet(int stap)
-        {
-            string welke;
-             if (stap == 0)
-             {
-            welke = "X";
-            zetnummer++;
-             }
-            else
-            {
-               welke = "O";
-                zetnummer--;
-            }
-            return welke;
-        }
-        private void algoritme() // maak een algoritme noob //
+
+        private void algoritme()
 
         {
             //winning statements AI//
