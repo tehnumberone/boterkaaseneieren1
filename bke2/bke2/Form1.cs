@@ -20,6 +20,15 @@ namespace bke2
         int zetnummer = 0;
         int winner = 0;
         int gelijkspel = 0;
+        string bb1;
+        string bb2;
+        string bb3;
+        string bb4;
+        string bb5;
+        string bb6;
+        string bb7;
+        string bb8;
+        string bb9;
         string currentbuttonclicked;
 
         string buttonclicked(string button)
@@ -49,6 +58,18 @@ namespace bke2
             if (gelijkspel >= 5 && winner != 1)
             {
                 MessageBox.Show("Gelijkspel!");
+                b1.Text = "";
+                b2.Text = "";
+                b3.Text = "";
+                b4.Text = "";
+                b5.Text = "";
+                b6.Text = "";
+                b7.Text = "";
+                b8.Text = "";
+                b9.Text = "";
+                winner = 0;
+                zetnummer--;
+                gelijkspel = 0;
             }
         }
 
@@ -58,11 +79,34 @@ namespace bke2
             {
                 winner = 1;
                 MessageBox.Show("O heeft gewonnen");
+                b1.Text = "";
+                b2.Text = "";
+                b3.Text = "";
+                b4.Text = "";
+                b5.Text = "";
+                b6.Text = "";
+                b7.Text = "";
+                b8.Text = "";
+                b9.Text = "";
+                winner = 0;
+                gelijkspel = 0;
+                zetnummer--;
             }
             if (zetnummer == 1 && winner == 0)
             {
                 winner = 1;
                 MessageBox.Show("X heeft gewonnen");
+                b1.Text = "";
+                b2.Text = "";
+                b3.Text = "";
+                b4.Text = "";
+                b5.Text = "";
+                b6.Text = "";
+                b7.Text = "";
+                b8.Text = "";
+                b9.Text = "";
+                winner = 0;
+                gelijkspel = 0;
             }
         }
 
@@ -206,19 +250,21 @@ namespace bke2
                 algoritme();
                 checkwin();
             }
+            checkbeurt();
         }
 
         private void algoritme()
         {
-            string bb1 = b1.Text;
-            string bb2 = b2.Text;
-            string bb3 = b3.Text;
-            string bb4 = b4.Text;
-            string bb5 = b5.Text;
-            string bb6 = b6.Text;
-            string bb7 = b7.Text;
-            string bb8 = b8.Text;
-            string bb9 = b9.Text;
+            bb1 = b1.Text;
+            bb2 = b2.Text;
+            bb3 = b3.Text;
+            bb4 = b4.Text;
+            bb5 = b5.Text;
+            bb6 = b6.Text;
+            bb7 = b7.Text;
+            bb8 = b8.Text;
+            bb9 = b9.Text;
+
             //winning statements AI//
             if (bb1 == "O" && zetnummer != 0)
             {
@@ -232,7 +278,7 @@ namespace bke2
                     b7.Text = "O";
                     zetnummer--;
                 }
-                if (bb1 == bb6 && bb9 == "" && zetnummer != 0)
+                if (bb1 == bb5 && bb9 == "" && zetnummer != 0)
                 {
                     b9.Text = "O";
                     zetnummer--;
@@ -258,6 +304,11 @@ namespace bke2
                 if (bb3 == bb5 && bb7 == "" && zetnummer != 0)
                 {
                     b7.Text = "O";
+                    zetnummer--;
+                }
+                if (bb3 == bb9 && bb6 == "" && zetnummer != 0)
+                {
+                    b6.Text = "O";
                     zetnummer--;
                 }
             }
@@ -351,6 +402,11 @@ namespace bke2
                     b7.Text = "O";
                     zetnummer--;
                 }
+                if (bb3 == bb9 && bb6 == "" && zetnummer != 0)
+                {
+                    b6.Text = "O";
+                    zetnummer--;
+                }
             }
 
             if (bb4 == "X" && zetnummer != 0)
@@ -393,7 +449,7 @@ namespace bke2
                     b3.Text = "O";
                     zetnummer--;
                 }
-                if (bb7 == bb5 && bb3 != "" && bb2=="" && zetnummer != 0)
+                if (bb7 == bb5 && bb3 != "" && bb2 == "" && zetnummer != 0)
                 {
                     b2.Text = "O";
                     zetnummer--;
@@ -423,8 +479,21 @@ namespace bke2
                     zetnummer--;
                 }
             }
+            if (bb9 == "X" && zetnummer != 0)
+            {
+                if (bb9 == bb6 && bb3 == "" && zetnummer != 0)
+                {
+                    b3.Text = "O";
+                    zetnummer--;
+                }
+            }
 
             //AI Placement//
+            if (bb5 == "" && zetnummer != 0)
+            {
+                b5.Text = "O";
+                zetnummer--;
+            }
             if (bb1 != "X" && bb2 != "X" && bb3 != "X" && zetnummer != 0)
             {
                 if (bb1 != "O" && bb1 == "" && zetnummer != 0)
@@ -497,6 +566,51 @@ namespace bke2
                 if (bb8 == "O" && bb9 == "" && zetnummer != 0)
                 {
                     b9.Text = "O";
+                    zetnummer--;
+                }
+
+            }
+            else
+            {
+                if (bb4 == "" && zetnummer != 0)
+                {
+                    b4.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb9 == "" && zetnummer != 0)
+                {
+                    b9.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb1 == "" && zetnummer != 0)
+                {
+                    b1.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb2 == "" && zetnummer != 0)
+                {
+                    b2.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb3 == "" && zetnummer != 0)
+                {
+                    b3.Text = "O";
+                    zetnummer--;
+                }
+
+                else if (bb6 == "" && zetnummer != 0)
+                {
+                    b6.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb7 == "" && zetnummer != 0)
+                {
+                    b7.Text = "O";
+                    zetnummer--;
+                }
+                else if (bb8 == "" && zetnummer != 0)
+                {
+                    b8.Text = "O";
                     zetnummer--;
                 }
 
